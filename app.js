@@ -48,6 +48,9 @@ app.post("/contacto", function(req, res){
                     user: 'admin@descubramos.mx', // generated ethereal user
                     pass: 'J0rg3m30996' // generated ethereal password
                 },
+                tls:{
+                    rejectUnauthorized: false
+                }
             });
 
             // setup email data with unicode symbols
