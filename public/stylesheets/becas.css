@@ -1,5 +1,18 @@
-
-
 .dot{
     color:#AB47BC; 
+}
+
+div.formulario{
+    margin-top: 5%;
+    border: #384650 5px solid;
+    background-color: #384650;
+    border-radius: 10px;
+}
+
+.txt-formulario{
+    color: white;
+}
+
+label {
+    color: white;
 }

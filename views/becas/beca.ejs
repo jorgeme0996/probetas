@@ -1,12 +1,154 @@
 <% include ../partials/header %>
 
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
+
 <link rel="stylesheet" href="/stylesheets/becas.css">
+
 
 <div class="container">
     <h2><strong>No renuncies a eso que quieres ser<strong class="dot">.</strong> Que el dinero no sea una barrera</strong><strong class="dot">.</strong></h2>
     <p>Nuestros precios son muy bajos. Pero entendemos que hay ocaciones en las que el dinero se ocupa para otras cosas más indispensables. Por eso tenemos un sitema de <strong>becas</strong> el cual no tiene limite, te podemos becar hasta el <strong>80%</strong>. Nosotros queremos que en México este la cuna del desarrollo.</p>
 
+    <h3>Aplica para una beca</h3>
+    <h4>¿Cual es el proceso?</h4>
+    <p> 1. Contesta todas las preguntas fel formulario y envialo.</p>        
+    <p> 2. Nos pondremos en contacto contigo para agendar una cita para tu entrevista.</p>
+    <p> 3. Evaluaremos tu aplicación y posteriormente recibiras un correo con la información de la beca que ganaste.</p>
+
+    <div class="formulario">
+        <h4 class="txt-formulario">Formulario para solicitar una beca.</h4>
+
+        <form class="needs-validation formulario" novalidate action="/beca" method="POST"> 
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+                    <label for="validationCustom01">Nombre(s)</label>
+                    <input type="text" class="form-control" id="validationCustom01" placeholder="Ejem: Juan de Jesús" name="beca[name]" required>
+                    <div class="invalid-feedback">
+                        Ingresa tu nombre.
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="validationCustom02">Apellidos</label>
+                    <input type="text" class="form-control" id="validationCustom02" placeholder="Ejem: Lopez Lopez" name="beca[lastName]" required>
+                    <div class="invalid-feedback">
+                        Ingresa tu(s) Apellido(s)
+                    </div>
+                </div>   
+            </div>
+
+
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="validationCustom03">Email</label>
+                    <input type="email" class="form-control" id="validationCustom03" placeholder="ejemplo@ejemplo.com" name="beca[email]" required>
+                    <div class="invalid-feedback">
+                        Ingresa un email para contactarte.
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="validationCustom04">Teléfono a 10 digítos</label>
+                    <input type="number" class="form-control" name="beca[celular]" id="validationCustom04" required>
+                    <div class="invalid-feedback">
+                        Ingresa un número de teléfono para contactarte.
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="validationCustom05">¿Podemos contactarte via Whatsapp?</label>
+                    <select class="custom-select" name="beca[whats]" required>
+                        <option value="Si">Si</option>
+                        <option value="No">No</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Elige una opción
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="validationCustom06">Cuantanos en un breve parrafo. ¿A que te decicas?</label>
+                <textarea class="form-control" required name="beca[actividaes]" rows="2"></textarea>
+                <div class="invalid-feedback">
+                    Ingresa una repuesta.
+                </div>
+            </div>
+
+            <h4 class="txt-formulario"><strong>OJO:</strong> ¡Ponte las pilas en esta sección!</h4>
+
+            <div class="form-group">
+                <label for="validationCustom07">¿Por qué crees que es importante aprender a programar/aprender a usar tecnología?</label>
+                <textarea class="form-control" required name="beca[programar]" rows="2"></textarea>
+                <div class="invalid-feedback">
+                    Ingresa una repuesta.
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="validationCustom08">¿Que harías con el conocimiento adquirido en Descubramos Juntos?</label>
+                <textarea class="form-control" required name="beca[conocimientos]" rows="2"></textarea>
+                <div class="invalid-feedback">
+                    Ingresa una repuesta.
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="validationCustom09">¿Por qué deberíamos darte una beca?</label>
+                <textarea class="form-control" required name="beca[porque]" rows="2"></textarea>
+                <div class="invalid-feedback">
+                    Ingresa una repuesta.
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="validationCustom10">¿Estas completamente comprometido con el programa?</label>
+                    <select class="custom-select" name="beca[compromiso]" required>
+                        <option value=""></option>
+                        <option value="Si">Si</option>
+                        <option value="No">No</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Elige una opción.
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="validationCustom11">En caso de recibir la beca, acepto pagar lo que me corresponde</label>
+                    <select class="custom-select" name="beca[pagar]" required>
+                        <option value=""></option>
+                        <option value="Si">Si</option>
+                        <option value="No">No</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Elige una opción.
+                    </div>
+                </div>   
+            </div>
+
+            <p>*No compartiremos tu información con nadie.</p>
+            <button class="btn btn-secondary" type="submit">Enviar Formulario</button>
+        
+        </form>
+    </div>   
 
 </div>
+
 
 <% include ../partials/footer %>
