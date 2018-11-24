@@ -1,0 +1,81 @@
+<% include ../partials/header %>
+
+<link rel="stylesheet" href="/stylesheets/programa.css">
+
+<div class="container">
+
+    <h1>Curso de desarrollo web (Full Satck)</h1>
+    <section id="tres">
+        <div class="row">
+            <div class="col-md-4 col-sm-4 col-4">
+                <h3 class="txt-tres"><i class="fas fa-battery-quarter verde"></i> Nivel: Básico</h3>
+            </div>
+            <div class="col-md-4 col-sm-4 col-4">
+                <h3 class="txt-tres"><i class="fas fa-clock rosa"></i> Duración: 2 Meses</h3>
+            </div>
+            <div class="col-md-4 col-sm-4 col-4">
+                <h3 class="txt-tres"><i class="fas fa-money-bill-wave-alt naranja"></i> Invesión: 2,500 MXN</h3>
+            </div>   
+        </div>
+    </section>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Temario</h2>
+            <ul>
+                <li><h3>Front End Development</h3></li>
+                <h4><span class="dot">-</span> HTML</h4>
+                <h4><span class="dot">-</span> CSS</h4>
+                <h4><span class="dot">-</span> Bootstrap 4</h4>
+                <h4><span class="dot">-</span> Flexbox</h4>
+                <h4><span class="dot">-</span> Javascript<h4>
+                <h4><span class="dot">-</span> DOM Manipulation</h4>
+                <h4><span class="dot">-</span> jQuery</h4>
+                <li><h3>Back End Development</h3></li>
+                <h4><span class="dot">-</span> Comandos de consola
+                <h4><span class="dot">-</span> Git</h4>
+                <h4><span class="dot">-</span> Node JS</h4>
+                <h4><span class="dot">-</span> Express</h4>
+                <h4><span class="dot">-</span> API´s</h4>
+                <h4><span class="dot">-</span> Bases de datos</h4>
+                <h4><span class="dot">-</span> Subir nuestro proyecto a la "nube"</h4>
+
+            </ul>
+        </div>
+
+        <div class="col-md-6">
+            <form class="ui form" action="/contacto" method="POST">
+                <div class="ui form formulario">
+                        <h4 class="ui dividing header txt-formulario">Envia tus datos y nos pondremos en contacto contigo</h4>
+                    <div class="field">
+                        <label class="txt-formulario">Nombre</label>
+                        <div class="two fields">
+                            <div class="field">
+                                <input type="text" name="contacto[name]" placeholder="Ejem: Juan">
+                            </div>
+                            <div class="field">
+                                <input type="text" name="contacto[lastName]" placeholder="Apellido(s)">
+                            </div>
+                        </div>  
+                    </div>
+            
+                    <div class="field">
+                        <label class="txt-formulario">Datos de contacto</label>
+                        <div class="two fields">
+                            <div class="field">
+                                <input type="email" name="contacto[email]" placeholder="ejemplo@ejemplo.com">
+                            </div>
+                            <div class="field">
+                                <input type="text" name="contacto[celular]" placeholder="Celular">
+                            </div>
+                        </div>  
+                        <p>*No compartiremos tu información con nadie.</p>
+                        <button type="submit" class="btn btn-secondary">Enviar</button>
+                    </div>
+                </div>
+            </form>
+        </div>   
+    </div>
+</div>
+
+<% include ../partials/footer %>

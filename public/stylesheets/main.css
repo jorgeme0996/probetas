@@ -1,0 +1,40 @@
+nav{
+    background-color: #593F55;
+}
+
+.nav-links{
+    font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+    border-bottom: #A68B6A 2px solid;
+}
+
+.nav-item {
+    margin-left: 20%;
+}
+
+a.nav-links:hover{
+    transform: scale(1.1);
+}
+
+a.nav-links:active{
+    transform: scale(1.2);
+}
+
+@media screen and (max-width: 600px){
+    #nav-brand{
+        width: 200px;
+    }
+    .nav-links{
+        font-size: 20px;
+    }
+    .nav-item {
+        margin-left: 40%;
+    }
+    .nav-item {
+        margin-left: 0%;
+        text-align: center;
+    } 
+    .nav-links{
+        font-size: 18px
+    }   
+}

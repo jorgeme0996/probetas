@@ -1,0 +1,60 @@
+section#tres{
+    background-color: #1297A6;
+}
+
+h1, h2, h3{
+    margin-top: 3%;
+}
+
+h2, h3{
+    color: #9B835E;
+}
+
+
+h4{
+    padding-left: 2em;
+}
+
+div.formulario{
+    margin-top: 10%;
+    border: #384650 5px solid;
+    background-color: #384650;
+    border-radius: 10px;
+}
+
+.txt-formulario{
+    color: white;
+}
+
+.txt-tres {
+    color: white;
+    margin-left: 2%;
+}
+
+.verde {
+    color: #66FF66;
+}
+
+.naranja{
+    color: #FF9933;
+}
+
+.rosa {
+    color: #EE34D2;
+}
+
+@media screen and (max-width: 600px){
+    .txt-tres{
+        font-size: 18px
+    }
+}
+
+@media screen and (max-width: 800px){
+    .txt-tres{
+        font-size: 18px
+    }
+}
+
+.dot{
+    color:#AB47BC; 
+}

@@ -1,0 +1,24 @@
+footer{
+    margin-top: 10%;
+    width: 100%;
+    background-color: #A68b6A;
+    left: 0;
+    bottom: 0;
+}
+
+.img-footer{
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.txt-footer{
+    color: #D9D8D7;
+    opacity: 0.6;
+}
+
+@media screen and (max-width: 600px){
+    .img-footer{
+        width: 50px;
+        height: 50px;
+    }
+}
