@@ -36,12 +36,13 @@ app.post("/beca", function(req, res){
         } else {
             const output = `
             <p> Tienes una solicitud de beca </p>
-            <h3> Detalles del solicitante </h3>
+            <h3> Detalles del solicitante:  ${newBeca.name}</h3>
             <ul>
                 <li>Nombre: ${newBeca.name}</li>
                 <li>Apellido: ${newBeca.lastName}</li>
                 <li>Email: ${newBeca.email}</li>
                 <li>Telefono de contacto: ${newBeca.celular}</li>
+                <li>¿Contactar por whats?: ${newBeca.whats}</li>
                 <li>¿Porque debemos darte la beca?: ${newBeca.porque}</li>
             </ul>
             `;
@@ -70,15 +71,9 @@ app.post("/beca", function(req, res){
                 if (error) {
                     return console.log(error);
                 }
-                console.log('Message sent: %s', info.messageId);
-                // Preview only available when sending through an Ethereal account
-                console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
-
-                // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
-                // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
             });
 
-            console.log(newlyBeca);
+            res.render("beca/correcto.ejs")
         }
     });
 
@@ -88,11 +83,11 @@ app.post("/contacto", function(req, res){
     var newContacto = req.body.contacto;
     Contacto.create(newContacto, function(err, newlyContacto){
         if(err){
-            
+            console.log(err)
         } else {
             const output = `
             <p> Tienes que contactar a alguien </p>
-            <h3> Detalles del contacto </h3>
+            <h3> Detalles del contacto:  ${newContacto.name}</h3>
             <ul>
                 <li>Nombre: ${newContacto.name}</li>
                 <li>Apellido: ${newContacto.lastName}</li>
@@ -125,12 +120,6 @@ app.post("/contacto", function(req, res){
                 if (error) {
                     return console.log(error);
                 }
-                console.log('Message sent: %s', info.messageId);
-                // Preview only available when sending through an Ethereal account
-                console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
-
-                // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
-                // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
             });
 
             res.render("programa/correcto.ejs")
