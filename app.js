@@ -19,6 +19,10 @@ app.get("/nosotros", function(req, res){
     res.render("nosotros/nosotros.ejs");
 });
 
+app.get("/beca", function(req, res){
+    res.render("becas/beca.ejs");
+});
+
 app.get("/programa", function(req, res){
     res.render("programa/programa.ejs");
 });
@@ -52,9 +56,9 @@ app.post("/contacto", function(req, res){
 
             // setup email data with unicode symbols
             let mailOptions = {
-                from: '"Nodemailer Contact" <admin@descubramos.mx>', // sender address
+                from: '"Descubramos Juntos" <admin@descubramos.mx>', // sender address
                 to: 'jorgeme0996@gmail.com', // list of receivers
-                subject: 'Requerimiento de Contacto', // Subject line
+                subject: 'Descubramos!!!!!!', // Subject line
                 text: 'Prueba', // plain text body
                 html: output // html body
             };
