@@ -52,7 +52,7 @@ app.post("/contacto", function(req, res){
 
             // setup email data with unicode symbols
             let mailOptions = {
-                from: '"Nodemailer Contact" <contacto@descubramos.mx>', // sender address
+                from: '"Nodemailer Contact" <admin@descubramos.mx>', // sender address
                 to: 'jorgeme0996@gmail.com', // list of receivers
                 subject: 'Requerimiento de Contacto', // Subject line
                 text: 'Prueba', // plain text body
