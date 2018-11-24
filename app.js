@@ -42,15 +42,12 @@ app.post("/contacto", function(req, res){
 
             let transporter = nodemailer.createTransport({
                 host: 'mail.privateemail.com',
-                port: 587,
-                secure: false, // true for 465, false for other ports
+                port: 465,
+                secure: true, // true for 465, false for other ports
                 auth: {
                     user: 'admin@descubramos.mx', // generated ethereal user
                     pass: 'J0rg3m30996' // generated ethereal password
                 },
-                tls:{
-                    rejectUnauthorized: false
-                }
             });
 
             // setup email data with unicode symbols
