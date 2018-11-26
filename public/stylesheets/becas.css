@@ -16,3 +16,19 @@ div.formulario{
 label {
     color: white;
 }
+
+#inicio-becas{
+    margin-top: 3%;
+    
+}
+
+#medio-becas{
+    background-color: bisque;
+    margin-top: 3%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+#aplica{
+    padding-bottom: 2%;
+}

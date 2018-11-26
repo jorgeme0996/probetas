@@ -1,8 +1,10 @@
 section#tres{
     background-color: #1297A6;
+    padding: 2%;
+    margin-top: 2%;
 }
 
-h1, h2, h3{
+h2, h3{
     margin-top: 3%;
 }
 
@@ -57,4 +59,61 @@ div.formulario{
 
 .dot{
     color:#AB47BC; 
+}
+
+label {
+    color: white;
+}
+
+#inicio-programa {
+    background-color: bisque;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}  
+
+#aplica {
+    text-align: center;
+    padding-top: 2%;
+}
+
+.tab{
+    padding-left: 2em;
+}
+
+a.ver{
+    text-decoration: none;
+    color: #AB47BC;
+}
+
+.btn-beca{
+    text-decoration: none;
+    color: white;
+    background-color: #A0A608;
+    border-radius: 10px;
+    animation: rotar 10s infinite; 
+    width: 200px;
+    border:  #A0A608 solid 5px;
+    text-align: center;
+    height: 100px;
+    font-size: 30px;
+}
+
+@keyframes rotar {
+    25%{
+        transform: scale(1.2);
+    }
+    50%{
+        transform: scale(1);
+    }
+    75%{
+        transform: scale(1.2)
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+div.btn{
+    margin-top: 10%;
+    margin-left: 10%;
 }

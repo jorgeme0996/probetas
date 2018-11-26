@@ -1,24 +1,84 @@
 <% include ../partials/header %>
 
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
+
 <link rel="stylesheet" href="/stylesheets/programa.css">
 
-<div class="container">
+<div id="inicio-programa">
+    <div class="container">
+        <h1>Curso de desarrollo web (Full Satck)</h1>
+        <section id="tres">
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-4">
+                    <h3 class="txt-tres"><i class="fas fa-clock rosa"></i> Duración: 3 Meses</h3>
+                </div>
+                <div class="col-md-4 col-sm-4 col-4">
+                    <h3 class="txt-tres"><i class="fas fa-battery-quarter verde"></i> Nivel: Básico</h3>
+                </div>
+                <div class="col-md-4 col-sm-4 col-4">
+                    <h3 class="txt-tres"><i class="fas fa-money-bill-wave-alt naranja"></i> Invesión: 2,500 MXN</h3>
+                </div>   
+            </div>
+        </section>
 
-    <h1>Curso de desarrollo web (Full Satck)</h1>
-    <section id="tres">
-        <div class="row">
-            <div class="col-md-4 col-sm-4 col-4">
-                <h3 class="txt-tres"><i class="fas fa-battery-quarter verde"></i> Nivel: Básico</h3>
+        <div class="row">  
+            <div class="col-md-6">  
+                <h3 id="aplica"><strong class="dot">¿A quien va dirigido?</strong></h3>
+                <p class="tab">
+                    En realidad este curso <strong>lo puede tomar cualquiera</strong>. Aprenderemos <strong>desde lo más 
+                    sencillo hasta lo más complejo del desarrollo web</strong>. Para aprender a programar 
+                    <strong>solo necesitas, una computadora y saber aritmética básica</strong> (sumar, restar, multiplicar, dividir). 
+                    <br>
+                    <br>
+                    Este curso es para <strong>cualquier persona que quiera aprender desarrollo web</strong>, independientemente de la experiencia previa.
+                    <br>
+                    <br>
+                    Especialmente va dirigido a esa <strong>persona que quiere cambiar al mundo</strong> con una idea revelocionara, misma idea que 
+                    <strong>influira en la vida de millones</strong>. 
+                </p>
             </div>
-            <div class="col-md-4 col-sm-4 col-4">
-                <h3 class="txt-tres"><i class="fas fa-clock rosa"></i> Duración: 2 Meses</h3>
+            <div class="col-md-6">  
+                <h3 id="aplica"><strong class="dot">Objetivo</strong></h3>
+                <p class="tab">
+                    Al terminar este curso podras <strong>crear, desde cero</strong>, y publicar, en la red, 
+                    <strong>tu propia página web</strong>. Podras <strong>emprender</strong> esa idea que siempre 
+                    has querido.
+                    <br>
+                    <br>
+                    Dominaras las tecnologías web; <strong>tu página sera completamente dinamica</strong> y se podra 
+                    <strong>adaptar a cualquier tamaño de pantalla</strong>.
+                    <br>
+                    <br>
+                    Podras diseñar y <strong>modelar bases de datos</strong> de la complejidad que tu desees o la que mejor se
+                    adapte a tus necesidaes o las del cliente y/o usuario.
+                    <br>
+                    <a class="ver" href="#temario">Revisa nuetro temario.</a>
+                </p>
             </div>
-            <div class="col-md-4 col-sm-4 col-4">
-                <h3 class="txt-tres"><i class="fas fa-money-bill-wave-alt naranja"></i> Invesión: 2,500 MXN</h3>
-            </div>   
         </div>
-    </section>
+    </div>
+</div>
 
+<div class="container" id="temario">
     <div class="row">
         <div class="col-md-6">
             <h2>Temario</h2>
@@ -38,43 +98,58 @@
                 <h4><span class="dot">-</span> Express</h4>
                 <h4><span class="dot">-</span> API´s</h4>
                 <h4><span class="dot">-</span> Bases de datos</h4>
+                <h4><span class="dot">-</span> Modelo Vista Controlador</h4>
                 <h4><span class="dot">-</span> Subir nuestro proyecto a la "nube"</h4>
 
             </ul>
         </div>
 
+
         <div class="col-md-6">
-            <form class="ui form" action="/contacto" method="POST">
-                <div class="ui form formulario">
-                        <h4 class="ui dividing header txt-formulario">Envia tus datos y nos pondremos en contacto contigo</h4>
-                    <div class="field">
-                        <label class="txt-formulario">Nombre</label>
-                        <div class="two fields">
-                            <div class="field">
-                                <input type="text" name="contacto[name]" placeholder="Ejem: Juan">
+            <div class="formulario">
+                <h4 class="txt-formulario">Envia tus datos y nos pondremos en contacto contigo</h4>
+                <form class="needs-validation formulario" novalidate action="/contacto" method="POST">
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                            <label for="validationCustom01">Nombre(s)</label>
+                            <input type="text" class="form-control" id="validationCustom01" placeholder="Juan de Jesús" name="contacto[name]" required>
+                            <div class="invalid-feedback">
+                                Ingresa tu nombre.
                             </div>
-                            <div class="field">
-                                <input type="text" name="contacto[lastName]" placeholder="Apellido(s)">
-                            </div>
-                        </div>  
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="validationCustom02">Apellido(s)</label>
+                            <input type="text" class="form-control" id="validationCustom02" name="contacto[lastName]">
+                        </div>   
                     </div>
-            
-                    <div class="field">
-                        <label class="txt-formulario">Datos de contacto</label>
-                        <div class="two fields">
-                            <div class="field">
-                                <input type="email" name="contacto[email]" placeholder="ejemplo@ejemplo.com">
+
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                            <label for="validationCustom01">Email</label>
+                            <input type="email" class="form-control" id="validationCustom01" placeholder="ejemplo@ejemplo.com" name="contacto[email]" required>
+                            <div class="invalid-feedback">
+                                Ingresa un email.
                             </div>
-                            <div class="field">
-                                <input type="text" name="contacto[celular]" placeholder="Celular">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="validationCustom02">Teléfono a 10 digitos</label>
+                            <input type="number" class="form-control" id="validationCustom02" name="beca[celular]" required>
+                            <div class="invalid-feedback">
+                                Ingresa un teléfono al que podamos contactarte.
                             </div>
-                        </div>  
-                        <p>*No compartiremos tu información con nadie.</p>
-                        <button type="submit" class="btn btn-secondary">Enviar</button>
+                        </div>   
                     </div>
+                    <p>*No compartiremos tu información con nadie.</p>
+                    <button class="btn btn-secondary" type="submit">Enviar</button>
+                </form>
+            </div>
+            <div class="btn">
+                <div class="row">
+                    <a href="/beca" class="button btn-beca">Aplica para <br> una beca</a>  
                 </div>
-            </form>
-        </div>   
+            </div>
+        </div> 
+        
     </div>
 </div>
 
