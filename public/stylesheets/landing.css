@@ -103,7 +103,7 @@ hr {
 
 @media screen and (max-width: 600px){
     #title-landing{
-        font-size: 40px;
+        font-size: 50px;
     }
     .button {
         width: 100px;
@@ -115,12 +115,8 @@ hr {
         width: 50px;
     }
     img#enseñar-img {
-        width: 300px;
-        height: 150px; 
-    }
-    iframe{
-        width: 300px;
-        height: 150px;
+        width: 350px;
+        height: 200px; 
     }
     .home {
         height: 300px;

@@ -73,7 +73,7 @@ app.post("/beca", function(req, res){
                 }
             });
 
-            res.render("beca/correcto.ejs")
+            res.render("becas/correcto")
         }
     });
 
@@ -128,7 +128,7 @@ app.post("/contacto", function(req, res){
 
 });
 
-app.listen(process.env.PORT,process.env.IP, function(){
+app.listen(4000, function(){
     console.log("Esta vivo!!!!")
 })
 //process.env.PORT,process.env.IP
