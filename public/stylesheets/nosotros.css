@@ -1,0 +1,45 @@
+.dot{
+    color: #AB47BC; 
+}
+
+.verde {
+    color: #66FF66;
+}
+
+div.baige {
+    margin-top: 0;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+li{
+    padding-top: 2%;
+    list-style-type: none;
+    padding-bottom: 2%;
+}
+
+#mision{
+    padding-left: 2em;
+}
+
+div.mision{
+    background-color: #AE84A7;
+    padding-bottom: 2%;
+    margin-bottom: 0;
+}
+
+h3{
+    color: white;
+}
+
+h1{
+    padding-bottom: 2%;
+}
+
+p{
+    padding-left: 2em;
+}
+
+span {
+    font-style: oblique;
+}
